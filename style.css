@@ -1,0 +1,128 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: url(./image/welcome.jpg) no-repeat fixed;
+  
+}
+
+ /* -------style the Header - */
+ .header {
+  grid-area: header;
+  width: 100%;
+  height: 245px;
+  /* background-color: #fff;  */
+  border-color:#08BEF8;
+  border-width: 5px 0pc 5px 0px;
+  border-style: solid;
+  border-radius:8px;
+  box-shadow: 4px 8px 8px 4px rgba(0,0,0,0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+ }
+
+.image {
+  width:95px;
+  height: 97px;
+  border-radius: 50%;
+  /* border: 2px solid #08BEF8;
+  box-shadow: 2px 4px 4px rgba(0,0,0,0.25); */
+  margin: 30px;
+}
+img {
+  width: 100%;
+  height: 100%;
+  size: cover;
+}
+
+.title {
+  width: 365px;
+  height: 70px;
+  background-color: #0810CE;
+  border-width: 0 4px 4px 0;
+  border-style: solid ;
+  border-color: #08BEF8;
+  box-shadow: 4px 7px 5px rgba(0,0,0,0.26);
+  border-radius: 15px;
+   
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.title h2 {
+  color: #fff;
+  font-weight: 600;
+  font-size: 30px;
+  letter-spacing: 3px;
+  text-shadow: 4px 4px 4px rgba(0,0,0,0.87);
+  text-transform: uppercase;
+}
+
+ /* ------the grid container */
+
+ .grid-container {
+  display: grid;
+  grid-template-areas: 
+  'header header header header header header'
+  'left left left left left right '
+  'footer footer footer footer footer footer';
+ }
+
+ .left,
+ .right{
+  padding:10px;
+  height: 500px;
+ }
+
+ .left {
+  grid-area: left;
+ }
+ .right {
+  grid-area: right;
+ }
+
+
+/* ---------Footer Area */
+ .footer {
+  height: 300px;
+  grid-area: footer;
+  /* background-color: #fff; */
+  padding: 10px;
+  text-align:left;
+  border-radius: 8px;
+  border-color: #08BEF8;
+  border-style: solid;
+  border-width: 5px 0px 5px 0;
+  box-shadow: 4px 8px 8px 4px rgba(0,0,0,0.5);
+ }
+ 
+.about {
+  width: 70%;
+  height: 100%;
+  padding: 30px;
+  float: left;
+  color: #fff;
+  text-shadow: 0 4px 4px rgba(0,0,0,0.6);
+
+}
+
+.about h2 {
+  font-size:32px;
+  font-weight: 600;
+}
+.media {
+  float: right;
+  padding: 30px;
+  color: #fff;
+  text-shadow: 0 4px 4px rgba(0,0,0,0.6);
+
+}
+.media p {
+  font-size: 26px;
+  font-weight: 500;
+  text-transform: capitalize;
+}
