@@ -8,7 +8,7 @@ body {
   
 }
 
- /* -------style the Header - */
+ /* ---------------------------style the Header - */
  .header {
   grid-area: header;
   width: 100%;
@@ -22,6 +22,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  
  }
 
 .image {
@@ -30,12 +31,11 @@ body {
   border-radius: 50%;
   /* border: 2px solid #08BEF8;
   box-shadow: 2px 4px 4px rgba(0,0,0,0.25); */
-  margin: 30px;
 }
 img {
   width: 100%;
   height: 100%;
-  size: cover;
+   
 }
 
 .title {
@@ -47,7 +47,7 @@ img {
   border-color: #08BEF8;
   box-shadow: 4px 7px 5px rgba(0,0,0,0.26);
   border-radius: 15px;
-   
+   margin-left: 30px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -62,7 +62,7 @@ img {
   text-transform: uppercase;
 }
 
- /* ------the grid container */
+ /* ---------------------------the grid container */
 
  .grid-container {
   display: grid;
@@ -75,18 +75,135 @@ img {
  .left,
  .right{
   padding:10px;
-  height: 500px;
  }
 
  .left {
   grid-area: left;
+
  }
  .right {
   grid-area: right;
  }
+/* ----------------------------------right area  */
+ .menu-bar {
+  width: 125px;
+  height: 560px;
+  /* background-color: #08BEF8; */
+  border-width: 2px 3px 4px 1px;
+  border-style: solid;
+  border-color: #08BEF8;
+  box-shadow: 8px 8px 8px 4px rgba(0,0,0,0.6);
+  border-radius: 16px;
+  display: block;
+  margin:30px ;
+  position: sticky;
+  top: 0;
+   
+ }
+
+.menu-bar .image {
+  display: block;
+  margin-top:10px ;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+li a{
+  display: block;
+  color: #08BEF8;
+  padding: 10px;
+  text-decoration: none;
+  text-shadow: 4px 4px 4px rgba(0,0,0,0.6);
+  text-align: center;
+  margin-top: 10px;
+}
+
+li a.active {
+  background-color: #08BEF8;
+  color: #fff;
+  border-radius: 6px;
+  margin: 10px;
+}
+
+li a:hover {
+  background-color: #555;
+  color: #fff;
+  border-radius: 6px;
+  margin: 10px;
+}
+ /* ------------------------------left column */
+ .card-1 {
+  width: 1150px;
+  height: 400px;
+  /* background-color: #fff; */
+  box-shadow: 4px 8px 8px rgba(0,0,0,0.6) ;
+  border-radius: 0 5px 5px 0;
+  display: flex;
+  margin: 50px;
+  border-color: #08BEF8;
+  border-width: 1px 0 0px 1px;
+  border-style: solid;
+  color: #fff;
+  text-shadow:3px 6px 6px rgba(0,0,0,0.6) ;
+  overflow: hidden;
+ }
+ /* .card-image {
+  width: 270px;
+  height: 100%;
+ } */
+ .card-image img {
+  width: 100%;
+  height: 100%;
+ }
+ .card-text {
+  margin:30px;
+  position: relative;
+ }
+
+ a .card-but {
+  width: 560px ;
+  height: 45px;
+  background-color: #08BEF8;
+  border-width: 0 4px 4px 0;
+  border-style: solid;
+  border-color: black;
+  box-shadow: 3px 6px 6px rgba(0,0,0,0.6) ;
+  border-radius: 11px;
+  margin-left: 50px;
+  text-decoration: none;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 30px;
+  font-weight: 600;
+  color: #fff;
+  text-shadow:3px 6px 6px rgba(0,0,0,0.6)  ;
+  
+ }
 
 
-/* ---------Footer Area */
+.card-but:hover {
+  color: #000000;
+  font-weight: 700;
+  background-color: #fff;
+  border-color: #08BEF8;
+  border-width: 1px 4px 4px 1px;
+}
+ 
+ .card-image-2 {
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  z-index: 1; 
+ }
+
+/* -------------------------------Footer Area */
  .footer {
   height: 300px;
   grid-area: footer;
