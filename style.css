@@ -1,10 +1,13 @@
 * {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
   font-family: Arial, Helvetica, sans-serif;
-  background: url(./image/welcome.jpg) no-repeat fixed;
+  background-color: rgb(224, 222, 222);
+  /* background: url(./image/welcome.jpg) no-repeat fixed; */
   
 }
 
@@ -12,17 +15,19 @@ body {
  .header {
   grid-area: header;
   width: 100%;
-  height: 245px;
+  height: 140px;
   background-color: #fff; 
   border-color:#08BEF8;
-  border-width: 5px 0pc 5px 0px;
+  border-width: 0px 0pc 5px 0px;
   border-style: solid;
-  border-radius:8px;
-  box-shadow: 4px 8px 8px 4px rgba(0,0,0,0.5);
+  /* border-radius:8px; */
+  /* box-shadow: 4px 8px 8px 4px rgba(0,0,0,0.5); */
   display: flex;
   align-items: center;
   justify-content: center;
-  
+  /* position: sticky;
+  top: 0;
+  z-index: 1; */
  }
 
 .image {
@@ -90,19 +95,20 @@ img {
  .menu-bar {
   width: 125px;
   height: 560px;
-  /* background-color: #08BEF8; */
+  background-color: #08BEF8;
   border-width: 2px 3px 4px 1px;
   border-style: solid;
-  border-color: #08BEF8;
+  border-color: #111;
   box-shadow: 8px 8px 8px 4px rgba(0,0,0,0.6);
   border-radius: 16px;
   margin:30px ;
   position: sticky;
-  top: 0;
+  top: 250px;
    
  }
 
 .menu-bar .image {
+  border: 3px solid #fff;
   display: block;
   margin-top:10px ;
   margin-left: auto;
@@ -117,7 +123,7 @@ ul {
 
 li a{
   display: block;
-  color: #08BEF8;
+  color:#fff;
   padding: 10px;
   text-decoration: none;
   text-shadow: 4px 4px 4px rgba(0,0,0,0.6);
@@ -126,8 +132,8 @@ li a{
 }
 
 li a.active {
-  background-color: #08BEF8;
-  color: #fff;
+  background-color: #f7f8f8;
+  color: rgb(7, 7, 7);
   border-radius: 6px;
   margin: 10px;
 }
@@ -141,12 +147,11 @@ li a:hover {
  /* ------------------------------left column */
  .card-1 {
   width: 1150px;
-  height: 400px;
   background-color: #fff;
   box-shadow: 4px 8px 8px rgba(0,0,0,0.6) ;
   border-radius:5px;
   display: flex;
-  margin: 50px;
+  margin: 10px;
   border-color: #08BEF8;
   border-width: 1px 0 0px 1px;
   border-style: solid;
@@ -165,6 +170,9 @@ li a:hover {
  .card-text {
   margin:30px;
   position: relative;
+ }
+ p ,h1 ,h4, h2,h3, pre,h5 {
+  margin: 10px;
  }
 
  a .card-but {
@@ -206,22 +214,22 @@ li a:hover {
 
 /* -------------------------------Footer Area */
  .footer {
-  height: 300px;
+  height: 220px;
   grid-area: footer;
-  background-color: #fff;
-  padding: 10px;
+  /* background-color: #fff; */
   text-align:left;
-  border-radius: 8px;
-  border-color: #08BEF8;
+  /* border-radius: 8px; */
+  /* border-color: #08BEF8;
   border-style: solid;
-  border-width: 5px 0px 5px 0;
-  box-shadow: 4px 8px 8px 4px rgba(0,0,0,0.5);
+  border-width: 5px 0px 5px 0; */
+  /* box-shadow: 4px 8px 8px 4px rgba(0,0,0,0.5); */
+  position: relative;
  }
  
 .about {
   width: 70%;
-  height: 100%;
-  margin: 20px;
+  margin-top: 20px;
+  margin-left: 30px;
   float: left;
   color:#111;
   text-shadow: 0 4px 4px rgba(0,0,0,0.6);
@@ -234,13 +242,65 @@ li a:hover {
 }
 .media {
   float: right;
-  padding: 30px;
   color: #111;
   text-shadow: 0 4px 4px rgba(0,0,0,0.6);
-
+  margin: 10px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
 }
 .media p {
-  font-size: 26px;
+  font-size: 20px;
   font-weight: 500;
   text-transform: capitalize;
 }
+/* -------------------------content card  */
+
+.grid-content-card{
+  width: 1150px;
+  /* background-color: #fff;
+  box-shadow: 4px 8px 8px rgba(0,0,0,0.6) ; */
+  border-radius:5px;
+  display: grid;
+  grid-template-columns: auto auto ;
+  gap: 8px;
+  padding: 10px;
+  
+  
+}
+
+.grid-content-card > div {
+  background-color: rgba(255, 255, 255, 0.8);
+  text-align: justify;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 6px;
+  border-bottom:4px solid #08BEF8;
+  border-right:4px solid #08BEF8;
+  box-shadow: 4px 8px 8px rgba(0,0,0,0.6) 
+}
+
+.item1 {
+  grid-row: 1 / 3;
+}
+ 
+.item1 p {
+  margin-top:20px;
+  font-weight: 500;
+}
+
+.item1 h4 {
+  color: #555;
+}
+
+  .item2 {
+    width: 400px ;
+    height: 320px;
+    /* background-color: #555; */
+  }
+
+  .item3{
+    width: 400px;
+    height: 320px;
+    /* background-color: #ddd; */
+  }
